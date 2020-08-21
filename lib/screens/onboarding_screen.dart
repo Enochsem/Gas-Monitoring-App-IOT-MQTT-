@@ -19,16 +19,23 @@ class OnBoardingScreen extends StatelessWidget {
              padding: EdgeInsets.all(25.0),
              child: CircleAvatar(
                radius: 100,
-               child:  Icon(Icons.android,color: Colors.green,size: 150.0,),
+               child:  Icon(Icons.local_gas_station,color: Colors.green,size: 150.0,),
              ),
            ),
+            Padding(
+              padding:EdgeInsets.all(15.0),
+              child:  Text("Gas Monitoring System",
+                style: TextStyle(
+                    fontSize: 30.0, fontWeight:FontWeight.bold, color: Colors.blue
+                ),
+              ),
+            ),
             Container(
               padding: EdgeInsets.all(20.0),
               child: Text(
-                'This Application will provide you'
-                    ' \nwith the following :\n 1.Data\n2.information',
+               "This system measures the weight of your gas and also detect fire outbreak and gas leakages.",
                 style: TextStyle(
-                    fontSize: 16.0
+                    fontSize: 20.0, fontWeight: FontWeight.bold, color: Colors.green
                 ),
               ),
             ),
@@ -38,9 +45,9 @@ class OnBoardingScreen extends StatelessWidget {
                height: 50.0,
                width: double.infinity,
                child: RaisedButton(
-                 onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (_)=>LoginScreen()));},
-                 color: Colors.green,
-                 child: Text('Get Started'),
+                 onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (_)=>LoginPage()));},
+                 color: Colors.blue,
+                 child: Text('Get Started', style: TextStyle(color:Colors.white, fontWeight: FontWeight.bold, fontSize: 20),),
                ),
              ),
            ),
